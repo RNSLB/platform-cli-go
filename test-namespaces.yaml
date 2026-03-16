@@ -1,0 +1,50 @@
+namespaces:
+  # Valid namespaces
+  - name: eng-api-prod
+    team: engineering
+    cpu_quota: 10
+    memory_quota: "20Gi"
+    environment: prod
+    
+  - name: eng-worker-prod
+    team: engineering
+    cpu_quota: 5
+    memory_quota: "10Gi"
+    environment: prod
+    
+  - name: data-pipeline-dev
+    team: data
+    cpu_quota: 20
+    memory_quota: "40Gi"
+    environment: dev
+    
+  - name: platform-tools-staging
+    team: platform
+    cpu_quota: 2
+    memory_quota: "4Gi"
+    environment: staging
+    
+  # Invalid namespaces (for testing)
+  - name: Invalid-NAME
+    team: platform
+    cpu_quota: 5
+    memory_quota: "10Gi"
+    environment: staging
+    
+  - name: -starts-hyphen
+    team: engineering
+    cpu_quota: 10
+    memory_quota: "20Gi"
+    environment: dev
+    
+  - name: ends-hyphen-
+    team: data
+    cpu_quota: 8
+    memory_quota: "16Gi"
+    environment: dev
+    
+  - name: has_underscore
+    team: platform
+    cpu_quota: 4
+    memory_quota: "8Gi"
+    environment: dev
